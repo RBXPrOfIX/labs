@@ -8,11 +8,11 @@ class Mother:
 
 class Daughter(Mother):
     def __init__(self, name, age):
-        super().__init__(name)
+        self.__name = name
         self.__age = age
 
     def __str__(self):
-        return f"Daughter's name is {self._Mother__name} and she is {self.__age} years old"
+        return f"Daughter's name is {self.__name} and she is {self.__age} years old"
 
 
 mother = Mother("Bobr")
