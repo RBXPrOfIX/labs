@@ -10,12 +10,12 @@ class Shape:
 
 class Triangle(Shape):
     def area(self):
-        return 0.5 * self.width * self.height
+        return abs(0.5 * self.width * self.height)
 
 
 class Rectangle(Shape):
     def area(self):
-        return self.width * self.height
+        return abs(self.width * self.height)
 
 
 triangle = Triangle(width, height)
