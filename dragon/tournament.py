@@ -4,7 +4,7 @@ from enemies import *
 from hero import *
 
 
-def annoying_input_int(message =''):
+def annoying_input_int(message=''):
     answer = None
     while answer == None:
         try:
@@ -27,6 +27,10 @@ def game_tournament(hero, dragon_list):
             else:
                 dragon.attack(hero)
                 print('Ошибка! \n** вам нанесён удар... **')
+            print(
+                f'Ваше здоровье: {hero._health}\n'
+                f'Здоровье дракона: {dragon._health}\n'
+            )
         if dragon.is_alive():
             break
         print('Дракон', dragon._color, 'повержен!\n')
@@ -42,7 +46,7 @@ def start_game():
 
     try:
         print('Добро пожаловать в арифметико-ролевую игру с драконами!')
-        print('Представьтесь, пожалуйста: ', end = '')
+        print('Представьтесь, пожалуйста: ', end='')
         hero = Hero(input())
 
         dragon_number = 3
